@@ -34,8 +34,7 @@
         "bootstrap": "4.3.1",
         "jquery": "3.4.1",
         "jquery.easing": "^1.4.1",
-        "suggestags": "^1.5.0",
-        "textfit": "^2.4.0"
+        "suggestags": "^1.5.0"
     },
     "devDependencies": {
         "browser-sync": "2.26.7",
