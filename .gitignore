@@ -1,3 +1,5 @@
-node_modules
+#ignore node modules
+node_modules/
 
-_dist
+#ignore dist
+_dist/
