@@ -185,6 +185,8 @@ function watchFiles() {
 }
 
 function toDist() {
+  del(["./_dist/*"]);
+  
   var css = gulp.src('./css/**/*')
     .pipe(gulp.dest('./_dist/css'));
 

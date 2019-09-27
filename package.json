@@ -3,7 +3,8 @@
     "name": "navex",
     "version": "1.0.0",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "start": "node_modules/.bin/gulp watch",
+        "publish": "./node_modules/.bin/gh-pages -d _dist/"
     },
     "description": "Navex Transportes de Qualidade",
     "keywords": [
@@ -39,6 +40,7 @@
     "devDependencies": {
         "browser-sync": "2.26.7",
         "del": "4.1.1",
+        "gh-pages": "^2.1.1",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "6.1.0",
         "gulp-clean-css": "4.2.0",
