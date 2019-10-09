@@ -1,6 +1,6 @@
 class Endereco {
 
-  endereco = '';
+  mapsPlace = {};
   tipo = 'casa'|'apartamento';
   andar = 0;
   temElevador = false;
@@ -10,6 +10,14 @@ class Endereco {
     this.tipo = tipo;
     this.andar = andar;
     this.temElevador = temElevador;
+  }
+
+  alterarTipo(tipo) {
+    this.tipo = tipo;
+  }
+
+  alterarAndar(andar) {
+    this.andar = andar;
   }
 
 };
