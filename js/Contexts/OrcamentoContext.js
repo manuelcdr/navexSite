@@ -1,6 +1,6 @@
-import Orcamento from '/js/models/Orcamento.js';
-import WizardOrcamento from '/js/models/Wizard.js';
-import Endereco from '/js/models/Endereco.js';
+import Orcamento from '../models/Orcamento.js';
+import WizardOrcamento from '../models/Wizard.js';
+import Endereco from '../models/Endereco.js';
 
 class Context {
 
