@@ -13,18 +13,18 @@ class Context {
       enderecoDestino: {
         required: true
       },
-      email: {
-        required: true
-      },
-      telefone: {
-        required: true
-      },
-      nome: {
-        required: true
-      },
       moveisEObjetos: {
         required: true
       }
+      // email: {
+      //   required: true
+      // },
+      // telefone: {
+      //   required: true
+      // },
+      // nome: {
+      //   required: true
+      // }
     },
 
     errorPlacement: function (error, element) {
