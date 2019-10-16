@@ -1,47 +1,46 @@
-html {
-  overflow: hidden;
-}
 
-body {
-  background-color: white;
-  background-color: transparent;
-  color: $black-color;
-  &.inverse {
-    background: #333333;
-    &, .form-control {
-      color: $mdb-text-color-light;
-    }
-    .modal,
-    .panel-default,
-    .card {
-      &,
-      .form-control {
-        background-color: initial;
-        color: initial;
-      }
-    }
+// body {
+//   background-color: white;
+//   background-color: transparent;
+//   color: $black-color;
+//   &.inverse {
+//     background: #333333;
+//     &, .form-control {
+//       color: $mdb-text-color-light;
+//     }
+//     .modal,
+//     .panel-default,
+//     .card {
+//       &,
+//       .form-control {
+//         background-color: initial;
+//         color: initial;
+//       }
+//     }
 
+//   }
+// }
+
+// blockquote{
+//     p{
+//         font-style: italic;
+//     }
+// }
+
+// .life-of-material-kit{
+//     background: #FFFFFF;
+// }
+
+// body {
+//   @include body-font;
+// }
+
+.wizard-container{
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+    font-weight: 300;
+    line-height: 1.5em;
   }
-}
-
-blockquote{
-    p{
-        font-style: italic;
-    }
-}
-
-.life-of-material-kit{
-    background: #FFFFFF;
-}
-
-body {
-  @include body-font;
-}
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-weight: 300;
-  line-height: 1.5em;
-}
+} 
 
 // h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
 //   @include heading-font;

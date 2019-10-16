@@ -18,47 +18,7 @@
  
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
-html {
-  overflow: hidden;
-}
-
-body {
-  background-color: white;
-  background-color: transparent;
-  color: #3C4858;
-}
-
-body.inverse {
-  background: #333333;
-}
-
-body.inverse, body.inverse .form-control {
-  color: #ffffff;
-}
-
-body.inverse .modal,
-body.inverse .modal .form-control,
-body.inverse .panel-default,
-body.inverse .panel-default .form-control,
-body.inverse .card,
-body.inverse .card .form-control {
-  background-color: initial;
-  color: initial;
-}
-
-blockquote p {
-  font-style: italic;
-}
-
-.life-of-material-kit {
-  background: #FFFFFF;
-}
-
-body {
-  font-family: 'Nunito';
-}
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+.wizard-container h1, .wizard-container h2, .wizard-container h3, .wizard-container h4, .wizard-container h5, .wizard-container h6, .wizard-container .h1, .wizard-container .h2, .wizard-container .h3, .wizard-container .h4 {
   font-weight: 300;
   line-height: 1.5em;
 }

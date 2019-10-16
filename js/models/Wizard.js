@@ -48,10 +48,10 @@ class WizardOrcamento {
     var $valid = w.validEnableElements(form);
     if (!$valid) {
       form.addClass('was-validated');
-      parent.resizeIframe('iframe-orcamento');
+      // parent.resizeIframe('iframe-orcamento');
       return false;
     }
-    parent.resizeIframe('iframe-orcamento');
+    // parent.resizeIframe('iframe-orcamento');
     return true;
   }
 
@@ -100,7 +100,7 @@ class WizardOrcamento {
 
         var form = $('#formOrcamento');
         form.removeClass('was-validated');
-        parent.resizeIframe('iframe-orcamento');
+        // parent.resizeIframe('iframe-orcamento');
 
         var $tabId = $('.tab-pane.active').attr('id');
         var $total = navigation.find('li').length;
