@@ -37,7 +37,6 @@ h6 {
 
 .page-section {
   padding: 50px 0;
-  border-bottom: 1px solid #dee2e6;
 }
 
 .page-section h2.section-heading {
@@ -93,6 +92,10 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.bg-light-color {
+  background-color: #afdde9;
 }
 
 iframe {
@@ -205,7 +208,6 @@ iframe {
 header.masthead {
   text-align: center;
   color: #214478;
-  background-color: #afdde9;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -226,11 +228,11 @@ header.masthead .desenho {
 
 header.masthead .desenho img {
   width: 80%;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 
@@ -638,10 +640,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #afdde9;
 }
 
 section#contact .section-heading {

@@ -9,6 +9,7 @@ class Orcamento {
   enderecoOrigem = new Endereco();
   enderecoDestino = new Endereco();
   querAjudantes = false;
+  vaiCarregarCaixas = false;
   querEmpacotamento = false;
   querEmbalar = false;
   querMontagem = false;
