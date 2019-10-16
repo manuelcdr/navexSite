@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-	<base href="/navexSite/">
+	<base href="/">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Material Bootstrap Wizard by Creative Tim</title>
@@ -32,15 +32,23 @@
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 
+	<link href="css/orcamento.min.css" rel="stylesheet">
 
 	<!-- <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/place-search-js/v1.0.0/place-search.css" /> -->
+
+	<script>
+		function resizeIframe(obj) {
+			obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+		}
+	</script>
+
 </head>
 
 <body>
 
-	<div class="image-container set-full-height">
-		<!--   Creative Tim Branding   -->
-		<!-- <a href="http://creative-tim.com">
+	<!-- <div class="image-container set-full-height"> -->
+	<!--   Creative Tim Branding   -->
+	<!-- <a href="http://creative-tim.com">
 	         <div class="logo-container">
 	            <div class="logo">
 	                <img src="vendor/wizard/assets/img/new_logo.png">
@@ -51,259 +59,304 @@
 	        </div>
 	    </a> -->
 
-		<!--  Made With Material Kit  -->
-		<!-- <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+	<!--  Made With Material Kit  -->
+	<!-- <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
 			<div class="brand">MK</div>
 			<div class="made-with">Made with <strong>Material Kit</strong></div>
 		</a> -->
 
-		<!--   Big container   -->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2">
-					<!--      Wizard container        -->
-					<div class="wizard-container">
-						<div class="card wizard-card" data-color="site" id="wizard">
-							<form action="" method="">
-								<!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+	<!--   Big container   -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<!--      Wizard container        -->
+				<div class="wizard-container">
+					<div class="card wizard-card" data-color="site" id="wizard">
+						<form id="formOrcamento" action="" method="" class="" novalidate>
+							<!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
-								<!-- <div class="wizard-header">
+							<!-- <div class="wizard-header">
 									<h3 class="wizard-title">
 										Ferramenta de orçamento On-line
 									</h3>
 									<h5>Com algumas informações você tem seu orçamento on-line! rápido e prático!</h5>
 								</div> -->
-								<div class="wizard-navigation">
-									<ul>
-										<li><a href="#endereco-de-origem" data-toggle="tab">Imóvel de Origem</a></li>
-										<li><a id="moveis-e-objetos-link" href="#moveis-e-objetos" data-toggle="tab">Móveis e Objetos</a>
-										</li>
-										<li><a href="#endereco-de-destino" data-toggle="tab">Imóvel de Destino</a></li>
-										<li><a href="#detalhes-do-servico" data-toggle="tab">Personalizar</a></li>
-										<li><a href="#finalizar" data-toggle="tab">Finalizar</a></li>
-									</ul>
-								</div>
+							<div class="wizard-navigation">
+								<ul>
+									<li><a href="#endereco-de-origem" data-toggle="tab">Origem</a></li>
+									<li><a id="moveis-e-objetos-link" href="#moveis-e-objetos" data-toggle="tab">Objetos</a>
+									</li>
+									<li><a href="#endereco-de-destino" data-toggle="tab">Destino</a></li>
+									<!-- <li><a href="#detalhes-do-servico" data-toggle="tab">Personalizar</a></li> -->
+									<li><a href="#finalizar" data-toggle="tab">Finalizar</a></li>
+								</ul>
+							</div>
 
-								<div class="tab-content">
-									<div class="tab-pane" id="endereco-de-origem">
-										<h4 class="info-text">Informe as caracteristicas do endereço onde os os móveis e
-											objetos serão retirados.</h4>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group label-floating">
-													<label class="control-label">Endereço de Origem</label>
-													<input id="enderecoOrigem" name="enderecoOrigem" type="text" class="form-control"
-														placeholder="Informe a Rua e Número">
+							<div class="tab-content">
+								<div class="tab-pane" id="endereco-de-origem">
+									<h4 class="info-text">Informe as caracteristicas do endereço onde os os móveis e
+										objetos serão retirados.</h4>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Endereço de Origem</label>
+												<input id="enderecoOrigem" name="enderecoOrigem" type="text" class="form-control"
+													placeholder="Informe a Rua e Número" required data-endereco-validate="Origem">
+												<div class="invalid-feedback">
+													Preencha e escolha um endereço da lista.
 												</div>
-											</div>
-											<!-- <div class="col-sm-12">
-												<div class="form-group label-floating">
-													<label class="control-label">Endereço de Destino</label>
-													<input id="enderecoDestino" name="enderecoDestino" type="text" class="form-control">
-												</div>
-											</div> -->
-
-											<!-- <div class="col-sm-12">
-												<h2 id="kilometragem"></h2>
-											</div> -->
-										</div>
-
-
-										<div class="row">
-											<div class="col-sm-auto">
-												<div class="custom-control custom-radio">
+												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" id="tipoOrigemCasa" name="tipoOrigem" value="casa"
-														class="custom-control-input">
+														class="custom-control-input" required>
 													<label class="custom-control-label" for="tipoOrigemCasa">Casa</label>
 												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="custom-control custom-radio">
+												<div class="custom-control custom-radio custom-control-inline mt-2">
 													<input type="radio" id="tipoOrigemApartamento" name="tipoOrigem" value="apartamento"
-														class="custom-control-input">
+														class="custom-control-input" required>
 													<label class="custom-control-label" for="tipoOrigemApartamento">Apartamento</label>
 												</div>
-											</div>
-										</div>
-
-										<div class="row opcoes-apartamento-origem">
-											<div class="col-sm-auto">
-												<div class="form-group">
-													<label for="andarOrigem">Andar do apartamento</label>
-													<select class="custom-select mr-sm-2" id="andarOrigem">
-														<option value="0" selected>Térreo</option>
-														<option value="1">1</option>
-														<option value="2">2</option>
-														<option value="3">3</option>
-														<option value="4">4</option>
-														<option value="5">5</option>
-														<option value="6">6</option>
-														<option value="7">7</option>
-														<option value="8">8</option>
-														<option value="9">9</option>
-														<option value="10">10</option>
-														<option value="11">11</option>
-														<option value="12">12</option>
-														<option value="13">13</option>
-														<option value="14">14</option>
-														<option value="15">15</option>
-														<option value="16">16</option>
-														<option value="17">17</option>
-														<option value="18">18</option>
-														<option value="19">19</option>
-														<option value="20">20</option>
-														<option value="21">21</option>
-														<option value="22">22</option>
-														<option value="23">23</option>
-														<option value="24">24</option>
-														<option value="25">25</option>
-														<option value="26">26</option>
-														<option value="27">27</option>
-														<option value="28">28</option>
-														<option value="29">29</option>
-													</select>
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="tipoOrigemLoja" name="tipoOrigem" value="loja"
+														class="custom-control-input" required>
+													<label class="custom-control-label" for="tipoOrigemLoja">Loja</label>
 												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="form-group">
-													<label for="temElevadorOrigem">Tem elevador de serviço?</label>
-													<div class="custom-control custom-switch">
-														<input type="checkbox" id="temElevadorOrigem" class="custom-control-input">
-														<label class="custom-control-label" for="temElevadorOrigem">Sim</label>
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="tipoOrigemGalpao" name="tipoOrigem" value="galpão"
+														class="custom-control-input" required>
+													<label class="custom-control-label" for="tipoOrigemGalpao">Galpão</label>
+												</div>
+												<div class="form-check">
+													<input type="radio" name="tipoOrigem" class="form-check-input d-none force-validate" required>
+													<div class="invalid-feedback">
+														Escolha uma das opções.
 													</div>
 												</div>
 											</div>
 										</div>
-
-
 									</div>
 
-									<div class="tab-pane" id="moveis-e-objetos">
-										<h4 class="info-text">Informe os móveis e objetos que serão transportados e serviços desejados.</h4>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<label class="control-label">Móveis e objetos a serem transportados</label>
-													<input id="moveisEObjetos" name="moveisEObjetos" type="text" class="form-control">
+									<div class="row opcoes-apartamento-origem">
+										<div class="col-sm-auto">
+											<div class="form-group">
+												<label class="font-weight-bold" for="andarOrigem">Andar do imóvel</label>
+												<select class="custom-select mr-sm-2" id="andarOrigem" name="andarOrigem">
+													<option value="0" selected>Térreo</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+												</select>
+											</div>
+										</div>
+										<div id="divElevadorOrigem" class="col-sm-auto">
+											<div class="form-group">
+												<label class="font-weight-bold" for="temElevadorOrigem">Tem elevador de serviço?</label>
+												<div class="custom-control custom-switch">
+													<input type="checkbox" id="temElevadorOrigem" class="custom-control-input">
+													<label class="custom-control-label" for="temElevadorOrigem">Sim</label>
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="tab-pane" id="endereco-de-destino">
-										<h4 class="info-text">Informe as caracteristicas do endereço onde os móveis e
-											objetos serão descarregados.</h4>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<label>Endereço de Destino</label>
-													<input id="enderecoDestino" name="enderecoDestino" type="text" class="form-control"
-														placeholder="Informe a Rua e Número">
+
+								</div>
+
+								<div class="tab-pane" id="moveis-e-objetos">
+									<h4 class="info-text">Informe os objetos que serão transportados e serviços desejados.</h4>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Móveis, eletrodomésticos e objetos maiores a
+													serem
+													transportados</label>
+												<input id="moveisEObjetos" name="moveisEObjetos" type="text" class="form-control force-validate"
+													required>
+												<div class="invalid-feedback">
+													Insira pelo menos um móvel, eletrodoméstico ou objeto
 												</div>
 											</div>
 										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-auto">
+											<label class="d-block font-weight-bold">Precisa de ajudantes para realizar o carregamento dos
+												objetos até o
+												veículo?</label>
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" id="querAjudantesSim" name="querAjudantes" value="true"
+													class="custom-control-input">
+												<label class="custom-control-label" for="querAjudantesSim">Sim!</label>
+											</div>
+											<div class="custom-control custom-radio custom-control-inline text-danger">
+												<input type="radio" id="querAjudantesNao" name="querAjudantes" value="false"
+													class="custom-control-input">
+												<label class="custom-control-label" for="querAjudantesNao">Não! Minha família e amigos vão me
+													ajudar com muito vigor!</label>
+												<div class="invalid-feedback">
+													Escolha uma das opções
+												</div>
+											</div>
+										</div>
+										<div id="divEmbalamento" class="col-sm-auto">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="querEmbalar">
+												<label class="custom-control-label" for="querEmbalar">Deseja embalamento profissional dos
+													objetos acima antes de carregá-los no veículo?</label>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-3">
+										<div class="col-sm-auto">
+											<label class="d-block font-weight-bold">Além dos objetos acima, irá precisar de espaço para
+												caixas com itens menores?<br>
+												<small>Exemplo: Objetos decorativos, louças, livros, etc...</small></label>
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" id="caixasSim" name="caixas" value="true" class="custom-control-input">
+												<label class="custom-control-label" for="caixasSim">Sim!</label>
+											</div>
+											<div class="custom-control custom-radio custom-control-inline text-danger">
+												<input type="radio" id="caixasNao" name="caixas" value="false" class="custom-control-input">
+												<label class="custom-control-label" for="caixasNao">Não! Levarei somente os objetos descritos
+													acima.</label>
+												<div class="invalid-feedback">
+													Escolha uma das opções
+												</div>
+											</div>
+										</div>
+										<div id="divEmpacotamento" class="col-sm-auto">
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="querEmpacotamento">
+												<label class="custom-control-label" for="querEmpacotamento">Deseja empacotamento profissional
+													destes objetos menores em caixas?</label>
+											</div>
+										</div>
+									</div>
+								</div>
 
-
-										<div class="row">
-											<div class="col-sm-auto">
-												<div class="custom-control custom-radio">
+								<div class="tab-pane" id="endereco-de-destino">
+									<h4 class="info-text">Informe as caracteristicas do endereço onde os móveis e
+										objetos serão descarregados.</h4>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label class="font-weight-bold">Endereço de Destino</label>
+												<input id="enderecoDestino" name="enderecoDestino" type="text" class="form-control"
+													placeholder="Informe a Rua e Número" data-endereco-validate="Destino" required>
+												<div class="invalid-feedback">
+													Preencha e escolha um endereço da lista
+												</div>
+												<div class="custom-control custom-radio custom-control-inline mt-2">
 													<input type="radio" id="tipoDestinoCasa" name="tipoDestino" value="casa"
-														class="custom-control-input">
+														class="custom-control-input" required>
 													<label class="custom-control-label" for="tipoDestinoCasa">Casa</label>
 												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="custom-control custom-radio">
+												<div class="custom-control custom-radio custom-control-inline">
 													<input type="radio" id="tipoDestinoApartamento" name="tipoDestino" value="apartamento"
-														class="custom-control-input">
+														class="custom-control-input" required>
 													<label class="custom-control-label" for="tipoDestinoApartamento">Apartamento</label>
 												</div>
-											</div>
-										</div>
-
-										<div class="row opcoes-apartamento-origem">
-											<div class="col-sm-auto">
-												<div class="form-group">
-													<label for="andarDestino">Andar do apartamento</label>
-													<select class="custom-select" id="andarDestino">
-														<option value="0" selected>Térreo</option>
-														<option value="1">1</option>
-														<option value="2">2</option>
-														<option value="3">3</option>
-														<option value="4">4</option>
-														<option value="5">5</option>
-														<option value="6">6</option>
-														<option value="7">7</option>
-														<option value="8">8</option>
-														<option value="9">9</option>
-														<option value="10">10</option>
-														<option value="11">11</option>
-														<option value="12">12</option>
-														<option value="13">13</option>
-														<option value="14">14</option>
-														<option value="15">15</option>
-														<option value="16">16</option>
-														<option value="17">17</option>
-														<option value="18">18</option>
-														<option value="19">19</option>
-														<option value="20">20</option>
-														<option value="21">21</option>
-														<option value="22">22</option>
-														<option value="23">23</option>
-														<option value="24">24</option>
-														<option value="25">25</option>
-														<option value="26">26</option>
-														<option value="27">27</option>
-														<option value="28">28</option>
-														<option value="29">29</option>
-													</select>
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="tipoDestinoLoja" name="tipoDestino" value="loja"
+														class="custom-control-input" required>
+													<label class="custom-control-label" for="tipoDestinoLoja">Loja</label>
 												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="form-group">
-													<label for="temElevadorDestino">Tem elevador de serviço?</label>
-													<div class="custom-control custom-switch">
-														<input type="checkbox" id="temElevadorDestino" class="custom-control-input">
-														<label class="custom-control-label" for="temElevadorDestino">Sim</label>
+												<div class="custom-control custom-radio custom-control-inline">
+													<input type="radio" id="tipoDestinoGalpao" name="tipoDestino" value="galpão"
+														class="custom-control-input" required>
+													<label class="custom-control-label" for="tipoDestinoGalpao">Galpão</label>
+												</div>
+												<div class="form-check">
+													<input type="radio" name="tipoDestino" class="form-check-input d-none force-validate"
+														required>
+													<div class="invalid-feedback">
+														Escolha uma das opções.
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 
-									<div class="tab-pane" id="detalhes-do-servico">
+									<div class="row">
+										<div class="col-sm-auto">
+											<div class="form-group">
+												<label class="font-weight-bold" for="andarDestino">Andar do imóvel</label>
+												<select class="custom-select" id="andarDestino" name="andarDestino">
+													<option value="0" selected>Térreo</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+												</select>
+											</div>
+										</div>
+										<div id="divElevadorDestino" class="col-sm-auto">
+											<div class="form-group">
+												<label class="font-weight-bold" for="temElevadorDestino">Tem elevador de serviço?</label>
+												<div class="custom-control custom-switch">
+													<input type="checkbox" id="temElevadorDestino" class="custom-control-input">
+													<label class="custom-control-label" for="temElevadorDestino">Sim</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- <div class="tab-pane" id="detalhes-do-servico">
 										<h4 class="info-text">Personalize o serviço de acordo com sua necessidade.</h4>
 										<div class="row">
-											<div class="col-sm-auto">
-												<label>Precisa de ajudantes para realizar o
-													carregamento e descarregamento dos móveis e objetos até o veículo?</label>
-												<div class="custom-control custom-radio">
-													<input type="radio" id="querAjudantesSim" name="querAjudantes" value="true"
-														class="custom-control-input">
-													<label class="custom-control-label" for="querAjudantesSim">Sim!</label>
-												</div>
-												<div class="custom-control custom-radio">
-													<input type="radio" id="querAjudantesNao" name="querAjudantes" value="false"
-														class="custom-control-input">
-													<label class="custom-control-label" for="querAjudantesNao">Não! Minha família e amigos vão me
-														ajudar com muito vigor!</label>
-												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="custom-control custom-checkbox">
-													<input type="checkbox" class="custom-control-input" id="querEmbalar">
-													<label class="custom-control-label" for="querEmbalar">Deseja embalamento profissional dos
-														móveis e eletrodomésticos antes de carregá-los no veículo?</label>
-												</div>
-											</div>
-											<div class="col-sm-auto">
-												<div class="custom-control custom-checkbox">
-													<input type="checkbox" class="custom-control-input" id="querEmpacotamento">
-													<label class="custom-control-label" for="querEmpacotamento">Deseja empacotamento profissional
-														de
-														itens e utensílios menores em caixas?</label>
-												</div>
-											</div>
+
+
 											<div class="col-sm-auto">
 												<div class="custom-control custom-checkbox">
 													<input type="checkbox" class="custom-control-input" id="querMontagem">
@@ -312,66 +365,87 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 
-									<div class="tab-pane" id="finalizar">
-										<h4 class="info-text">Preencha seus dados para finalizar o orçamento</h4>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<label class="control-label">Nome</label>
-													<input id="nome" name="nome" type="text" class="form-control">
+								<div class="tab-pane" id="finalizar">
+									<h4 class="info-text">Preencha seus dados para finalizar o orçamento</h4>
+									<div class="row">
+										<div class="col-sm-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Nome</label>
+												<input id="nome" name="nome" type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Campo obrigatório
 												</div>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-sm-12 col-md-6">
-												<div class="form-group">
-													<label class="control-label">Email</label>
-													<input id="email" name="email" type="email" class="form-control">
+										<div class="col-sm-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Período para realizar o transporte</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+													</div>
+													<input id="periodo" name="periodo" type="text" class="form-control" required>
 												</div>
-											</div>
-											<div class="col-sm-12 col-md-6">
-												<div class="form-group">
-													<label class="control-label">Telefone</label>
-													<input id="telefone" name="telefone" type="text" class="form-control"
-														placeholder="(11) 97777-7777">
+												<div class="invalid-feedback">
+													Escolha um período que o transporte pode ser feito
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<label class="control-label">Período para realizar o transporte</label>
-													<input id="periodo" name="periodo" type="text" class="form-control">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-auto">
-												<h4 id="valor-orcamento"></h4>
-												<h4 id="valor-orcamento-custo"></h4>
-											</div>
-											<div class="col-sm-auto">
-												<h4 id="valor-orcamento-compartilhado"></h4>
-												<h4 id="valor-orcamento-compartilhado-custo"></h4>
 											</div>
 										</div>
 									</div>
-
+									<div class="row">
+										<div class="col-sm-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Email</label>
+												<input id="email" name="email" type="email" class="form-control" required>
+												<div class="invalid-feedback">
+													E-mail inválido
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 col-md-6">
+											<div class="form-group">
+												<label class="control-label font-weight-bold">Telefone</label>
+												<input id="telefone" name="telefone" type="text" class="form-control"
+													placeholder="(11) 97777-7777" required>
+												<div class="invalid-feedback">
+													Telefone inválido
+												</div>
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="permiteContatoWA"
+														name="permiteContatoWA">
+													<label class="custom-control-label" for="permiteContatoWA">
+														Prefere contato via Whatsapp <i class="fab fa-whatsapp text-success"></i> ?</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-auto">
+											<h4 id="valor-orcamento"></h4>
+											<h4 id="valor-orcamento-custo"></h4>
+										</div>
+										<div class="col-sm-auto">
+											<h4 id="valor-orcamento-compartilhado"></h4>
+											<h4 id="valor-orcamento-compartilhado-custo"></h4>
+										</div>
+									</div>
 								</div>
 
-								<div class="wizard-footer">
-									<div class="float-right">
-										<input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Próximo' />
-										<input type='button' class='btn btn-finish btn-fill btn-wd' name='finish'
-											value='Realizar Orçamento' />
-									</div>
-									<div class="float-left">
-										<input type='button' class='btn btn-previous btn-fill btn-wd' name='previous' value='Voltar' />
+							</div>
 
-										<div class="footer-checkbox">
-											<!-- <div class="col-sm-12">
+							<div class="wizard-footer">
+								<div class="float-right">
+									<input type='button' class='btn btn-next btn-fill btn-wd' name='next' value='Próximo' />
+									<input type='button' class='btn btn-finish btn-fill btn-wd' name='finish'
+										value='Realizar Orçamento' />
+								</div>
+								<div class="float-left">
+									<input type='button' class='btn btn-previous btn-fill btn-wd' name='previous' value='Voltar' />
+
+									<div class="footer-checkbox">
+										<!-- <div class="col-sm-12">
 												<div class="checkbox">
 													<label>
 														<input type="checkbox" name="optionsCheckboxes">
@@ -379,18 +453,18 @@
 													Subscribe to our newsletter
 												</div>
 											</div> -->
-										</div>
 									</div>
-									<div class="clearfix"></div>
 								</div>
-						</div>
-
-						</form>
+								<div class="clearfix"></div>
+							</div>
 					</div>
-				</div> <!-- wizard container -->
-			</div>
-		</div> <!-- row -->
-	</div> <!--  big container -->
+
+					</form>
+				</div>
+			</div> <!-- wizard container -->
+		</div>
+	</div> <!-- row -->
+	<!-- </div>  big container -->
 
 	<!-- <div class="footer">
 		<div class="container text-center">
@@ -419,10 +493,11 @@
 
 
 <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
-<script src="vendor/wizard/assets/js/jquery.validate.min.js"></script>
+<!-- <script src="vendor/wizard/assets/js/jquery.validate.min.js"></script> -->
 <script src="vendor/suggestags/js/jquery.amsify.suggestags.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
@@ -434,63 +509,11 @@
 <script type="module">
 	import Context from './js/Contexts/OrcamentoContext.js';
 
+	const context = new Context();
+
 	$(() => {
-		var context = new Context();
 		context.initialize();
 	})
-
-</script>
-
-<!--  Plugin for the Wizard -->
-<!-- <script src="vendor/wizard/assets/js/material-bootstrap-wizard.js"></script> -->
-
-<script>
-
-	// var tagIniciada = false;
-	// var tags = new AmsifySuggestags($('input[name="moveisEObjetos"]'))
-	// tags._settings({
-	// 	suggestions: ['cama casal', 'cama solteiro', 'geladeira', 'fogão', 'sofá 3 lugares', 'sofá 2 lugares', 'poltrona']
-	// });
-
-	// (function ($) {
-	// 	"use strict"; // Start of use strict
-
-	// 	$('#moveis-e-objetos-link').click(function () {
-	// 		if (tagIniciada) return;
-	// 		setTimeout(function () {
-	// 			tags._init();
-	// 			tagIniciada = true;
-	// 		}, 200);
-	// 	});
-
-
-	// 	$('input[name=finish]').click(function () {
-	// 		var origem = new Endereco(
-	// 			$('#enderecoOrigem').val(),
-	// 			$('[name=tipoOrigem]:checked').val(),
-	// 			$('#andarOrigem').val(),
-	// 			$('#temElevadorOrigem').is(':checked')
-	// 		);
-
-	// 		var destino = new Endereco(
-	// 			$('#enderecoDestino').val(),
-	// 			$('[name=tipoDestino]').val(),
-	// 			$('#andarDestino').val(),
-	// 			$('#temElevadorDestino').is(':checked')
-	// 		);
-
-	// 		calcular(
-	// 			origem, 
-	// 			destino, 
-	// 			tags.tagNames, 
-	// 			$('[name=querAjudantes]:checked').val(), 
-	// 			$('#querEmbalar').is(':checked'),
-	// 			$('#querEmpacotamento').is(':checked'),
-	// 			$('#querMontagem').is(':checked')
-	// 		)
-	// 	});
-
-	// })(jQuery);
 
 </script>
 
