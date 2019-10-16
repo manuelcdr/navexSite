@@ -1,3 +1,4 @@
+import Orcamento from "./Orcamento.js";
 
 class TabFunction {
   nome = "";
@@ -13,9 +14,11 @@ class TabFunction {
 class WizardOrcamento {
 
   $validator = {};
+  orcamento = new Orcamento();
 
-  constructor(validator) {
+  constructor(validator, orcamento) {
     this.$validator = validator;
+    this.orcamento = orcamento;
   }
 
   tabShowFunctions = [];
@@ -30,23 +33,25 @@ class WizardOrcamento {
   }
 
   callTabFunction(nome) {
-    console.log('callTabFunction', nome);
     if (this.tabShowFunctions.length <= 0) { return };
 
     this.tabShowFunctions.forEach((tabFunction, i) => {
       if (tabFunction.nome === nome) {
-        console.log(tabFunction.funcao);
         tabFunction.funcao();
       }
     });
   }
 
   validateForm() {
-    var $valid = $('.wizard-card form').valid();
+    var w = this;
+    var form = $('#formOrcamento');
+    var $valid = w.validEnableElements(form);
     if (!$valid) {
-      this.$validator.focusInvalid();
+      form.addClass('was-validated');
+      parent.resizeIframe('iframe-orcamento');
       return false;
     }
+    parent.resizeIframe('iframe-orcamento');
     return true;
   }
 
@@ -91,9 +96,12 @@ class WizardOrcamento {
       },
 
       onTabShow: function (tab, navigation, index) {
-        console.log('show', tab, navigation);
         w.currentTab = index;
-        
+
+        var form = $('#formOrcamento');
+        form.removeClass('was-validated');
+        parent.resizeIframe('iframe-orcamento');
+
         var $tabId = $('.tab-pane.active').attr('id');
         var $total = navigation.find('li').length;
         var $current = index + 1;
@@ -172,6 +180,21 @@ class WizardOrcamento {
       }
       reader.readAsDataURL(input.files[0]);
     }
+  }
+
+  validEnableElements(form) {
+    var todosValidos = true;
+    var visibles = $('.tab-pane.active').find('[name]:visible, input.force-validate');
+    
+    visibles.each(function () {
+      if (!$(this)[0].checkValidity()) 
+      { 
+        todosValidos = false;
+        return false;
+      }
+    });
+
+    return todosValidos;
   }
 
   // $(window).resize(function () {

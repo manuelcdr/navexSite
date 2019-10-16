@@ -59,7 +59,7 @@
             <a class="nav-link js-scroll-trigger" href="#team">Quem somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger nav-destaque" href="/orcamento-online.html">Orçamento Online</a>
+            <a class="nav-link js-scroll-trigger nav-destaque" href="orcamento-online.html">Orçamento Online</a>
 
           </li>
           <li class="nav-item">
@@ -74,8 +74,8 @@
   </nav>
 
   <!-- Header -->
-  <header class="masthead">
-    <div class="container">
+  <!-- <header class="masthead"> -->
+  <!-- <div class="container">
 
       <div class="intro-text">
         <div class="logo">
@@ -86,19 +86,48 @@
           <div class="slogan-box fittext text-uppercase">
             Transportando Qualidade
           </div>
-        </div>
-        <!-- <div class="intro-lead-in">Ajudando na sua mudança</div> -->
-        <!-- <div class="intro-heading text-uppercase"></div> -->
-        <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
-      </div>
+        </div> -->
+  <!-- <div class="intro-lead-in">Ajudando na sua mudança</div> -->
+  <!-- <div class="intro-heading text-uppercase"></div> -->
+  <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
+  <!-- </div>
       <div class="desenho">
+        <img src="img/logos/logo-navex-azul.png" alt="background" srcset="img/unDraw/best-place.svg">
+      </div>
+    </div> -->
+  <!-- </header> -->
+
+  <header class="masthead bg-light-color">
+    <div class="container">
+      <div class="row intro-text">
+        <div class="col-sm-12 text-center align-middle">
+          <h3>Estimativa de preço Rápida e Online!</h3>
+          <!-- <div class="logo">
+            <img src="img/logos/logo-navex-azul.png" alt="logo navex" width="300"
+              srcset="img/logos/logo-navex-azul.svg">
+          </div>
+
+          <div class="slogan-row mt-3">
+            <div class="slogan-box fittext text-uppercase">
+              Transportando Qualidade
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <iframe id="iframe-orcamento" src="orcamento-online.html" class="w-100 p-0" frameborder="0" scrolling="no"
+            onload="resizeIframe('iframe-orcamento')"></iframe>
+        </div>
+      </div>
+      <div class="desenho mt-4">
         <img src="img/logos/logo-navex-azul.png" alt="background" srcset="img/unDraw/best-place.svg">
       </div>
     </div>
   </header>
 
   <!-- Services -->
-  <section class="page-section" id="services">
+  <section class="page-section bg-light" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -434,18 +463,18 @@
 
 
   <!-- Estimador -->
-  <section class=" bg-light page-section" id="estimador" >
-    <!-- <div class="container">
+  <!-- <section class="page-section" id="estimador"> -->
+  <!-- <div class="container">
         <div class="custom-control custom-switch">
             <label class="" for="customSwitch1">Não</label>
             <input type="checkbox" class="custom-control-input" id="customSwitch1">
             <label class="custom-control-label" for="customSwitch1">Sim</label>
           </div>
       <div class="row"> -->
-        <iframe id="iframe-orcamento" src="orcamento-online.html" class="col-sm-12 p-0" height="700" ></iframe>
+  <!-- <iframe id="iframe-orcamento" src="orcamento-online.html" class="col-sm-12 p-0" height="700"></iframe> -->
 
-      <!-- </div> -->
-      <!-- <div class="row">
+  <!-- </div> -->
+  <!-- <div class="row">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
             aria-controls="v-pills-home" aria-selected="true">Home</a>
@@ -483,12 +512,12 @@
           </div>
         </div>
       </div> -->
-    <!-- </div> -->
-  </section>
+  <!-- </div> -->
+  <!-- </section> -->
 
 
   <!-- Clients -->
-  <section class="py-5">
+  <!-- <section class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
@@ -513,14 +542,14 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Contact -->
   <section class="page-section" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h2 class="section-heading text-uppercase text-black-50">Contact Us</h2>
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
@@ -570,7 +599,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Navex
+          <span class="copyright">Copyright &copy; Navex Transportes
             <script>document.write(new Date().getFullYear())</script></span>
         </div>
         <div class="col-md-4">
@@ -854,6 +883,15 @@
           blipClient.build();
         }
       })();
+
+
+  </script>
+
+  <script type="text/javascript">
+    function resizeIframe(iframeId) {
+      var iframe = document.getElementById(iframeId);
+      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
   </script>
 
 </body>

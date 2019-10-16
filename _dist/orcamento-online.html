@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-	<base href="/">
+	<base href="/navexSite/">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Material Bootstrap Wizard by Creative Tim</title>
@@ -27,6 +27,7 @@
 	<link href="vendor/suggestags/css/amsify.suggestags.css" rel="stylesheet">
 	<!-- <link href="vendor/wizard/assets/css/bootstrap.min.css" rel="stylesheet" /> -->
 	<!-- <link href="vendor/wizard/assets/css/customs-elemets.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 	<link href="vendor/wizard/assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
@@ -339,6 +340,14 @@
 											</div>
 										</div>
 										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group">
+													<label class="control-label">Período para realizar o transporte</label>
+													<input id="periodo" name="periodo" type="text" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-sm-auto">
 												<h4 id="valor-orcamento"></h4>
 												<h4 id="valor-orcamento-custo"></h4>
@@ -413,6 +422,9 @@
 <script src="vendor/wizard/assets/js/jquery.validate.min.js"></script>
 <script src="vendor/suggestags/js/jquery.amsify.suggestags.js"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <!-- <script src="js/Contexts/OrcamentoContext.js"></script> -->
 

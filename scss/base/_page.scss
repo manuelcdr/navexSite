@@ -31,7 +31,7 @@ h6 {
 
 .page-section {
   padding: 50px 0;
-  border-bottom: 1px solid $gray-300;
+  // border-bottom: 1px solid $gray-300;
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -85,6 +85,10 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.bg-light-color {
+  background-color: $light-color;
 }
 
 iframe {

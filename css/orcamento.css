@@ -1,0 +1,23 @@
+/*!
+ * Start Bootstrap - Navex v1.0.0 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/navex/blob/master/LICENSE)
+ */
+
+.was-validated select.custom-select:valid, .was-validated input.form-control:valid {
+  background-image: none !important;
+  border: 1px solid #ced4da !important;
+}
+
+.was-validated .custom-control-input:valid ~ .custom-control-label {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.was-validated .custom-control-input:valid ~ .custom-control-label::before {
+  border: #adb5bd solid 1px !important;
+}
+
+.was-validated .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #007bff !important;
+  background-color: #007bff !important;
+}

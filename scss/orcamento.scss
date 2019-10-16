@@ -1,0 +1,16 @@
+.was-validated {
+  select.custom-select:valid, input.form-control:valid {
+    background-image: none !important;
+    border: 1px solid #ced4da !important;
+  }
+  .custom-control-input:valid~.custom-control-label {
+    color: rgba(0,0,0, 0.87) !important;
+  }
+  .custom-control-input:valid~.custom-control-label::before {
+    border: #adb5bd solid 1px !important;
+  }
+  .custom-control-input:checked~.custom-control-label::before {
+    border-color: #007bff !important;
+    background-color: #007bff !important;
+  }
+}

@@ -3,7 +3,7 @@ header.masthead {
   text-align: center;
   color: $primary;
   // background-image: url('../img/header-bg.jpg');
-  background-color: $light-color;
+  // background-color: $light-color;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -21,11 +21,11 @@ header.masthead {
     bottom: -1.5px;
     img {
       width: 80%;
-      max-width: 500px;
+      max-width: 450px;
     }
   }
   .intro-text {
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 30px;
     .logo {
       img {
