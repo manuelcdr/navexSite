@@ -2,6 +2,11 @@
     .main .container{
         margin-bottom: 50px;
     }
+    .btn-wd {
+        min-width: 120px;
+        font-size: 12px;
+        line-height: 1.7rem;
+    }
 }
 
 @media (min-width: 768px){
@@ -13,6 +18,8 @@
     }
 
     .btn-wd {
-        min-width: 140px;
+        min-width: 120px;
+        font-size: 12px;
+        line-height: 1.7rem;
     }
 }

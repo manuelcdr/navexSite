@@ -48,10 +48,8 @@ class WizardOrcamento {
     var $valid = w.validEnableElements(form);
     if (!$valid) {
       form.addClass('was-validated');
-      // parent.resizeIframe('iframe-orcamento');
       return false;
     }
-    // parent.resizeIframe('iframe-orcamento');
     return true;
   }
 
@@ -79,7 +77,8 @@ class WizardOrcamento {
         var $wizard = navigation.closest('.wizard-card');
 
         var $first_li = navigation.find('li:first-child a').html();
-        var $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
+        var $moving_div = $('<div class="moving-tab"></div>');
+        $moving_div.append($first_li);
         $('.wizard-card .wizard-navigation').append($moving_div);
 
         w.refreshAnimation($wizard, index);
@@ -88,11 +87,16 @@ class WizardOrcamento {
       },
 
       onTabClick: function (tab, navigation, index, clickedIndex) {
-        if (clickedIndex < w.currentTab) {
-          return true;
-        }
+        return false;
+        // if (clickedIndex < w.currentTab) {
+        //   return true;
+        // }
 
-        return w.validateForm();
+        // if (clickedIndex > w.currentTab) {
+        //   clickedIndex = parseInt(clickedIndex) + 1;
+        // }
+
+        // return w.validateForm();
       },
 
       onTabShow: function (tab, navigation, index) {
@@ -100,7 +104,6 @@ class WizardOrcamento {
 
         var form = $('#formOrcamento');
         form.removeClass('was-validated');
-        // parent.resizeIframe('iframe-orcamento');
 
         var $tabId = $('.tab-pane.active').attr('id');
         var $total = navigation.find('li').length;
@@ -116,10 +119,10 @@ class WizardOrcamento {
           $($wizard).find('.btn-finish').hide();
         }
 
-        var button_text = navigation.find('li:nth-child(' + $current + ') a').html();
-
+        var button_text = $.parseHTML(navigation.find('li:nth-child(' + $current + ') a:visible').html());
+        console.log(button_text);
         setTimeout(function () {
-          $('.moving-tab').text(button_text);
+          $('.moving-tab').html(button_text);
         }, 150);
 
         var checkbox = $('.footer-checkbox');
@@ -197,19 +200,6 @@ class WizardOrcamento {
     return todosValidos;
   }
 
-  // $(window).resize(function () {
-  //   $('.wizard-card').each(function () {
-  //     $wizard = $(this);
-
-  //     index = $wizard.bootstrapWizard('currentIndex');
-  //     refreshAnimation($wizard, index);
-
-  //     $('.moving-tab').css({
-  //       'transition': 'transform 0s'
-  //     });
-  //   });
-  // });
-
   refreshAnimation($wizard, index) {
     var w = this;
     var $total = $wizard.find('.nav li').length;
@@ -223,12 +213,16 @@ class WizardOrcamento {
     w.mobile_device = $(document).width() < 600 && $total > 3;
 
     if (w.mobile_device) {
-      move_distance = $wizard.width() / 2;
+      move_distance = $wizard.width() / 4;
       index_temp = index % 2;
-      $li_width = 50;
+      $li_width = 25;
     }
 
     $wizard.find('.nav li').css('width', $li_width + '%');
+
+    if (w.mobile_device) {
+      $wizard.find('.nav li').css('font-size', $li_width + '%');
+    }
 
     var step_width = move_distance;
     move_distance = move_distance * index_temp;

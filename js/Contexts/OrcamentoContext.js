@@ -62,7 +62,7 @@ class Context {
     this.wizard.initialize();
     this.wizard.addTabFunction('moveis-e-objetos', () => { this.functionShowTabTags(o) });
 
-    $('input[name=finish]').click(async () => {
+    $('button[name=finish]').click(async () => {
       if (this.wizard.validateForm()) {
         await this.finalizarOrcamento();
       }
@@ -224,6 +224,20 @@ class Context {
       var condicao = $(this).val() === 'true';
       c.toggleShow(condicao, $('#divEmpacotamento'));
     })
+
+    $(window).resize(function () {
+      $('.wizard-card').each(function () {
+        var $wizard = $(this);
+    
+        var index = $wizard.bootstrapWizard('currentIndex');
+        c.wizard.refreshAnimation($wizard, index);
+    
+        $('.moving-tab').css({
+          'transition': 'transform 0s'
+        });
+      });
+    });
+
   }
 
   toggleShow(show, element) {

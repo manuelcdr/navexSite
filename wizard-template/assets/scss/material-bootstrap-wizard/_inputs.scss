@@ -378,6 +378,9 @@ select.form-control {
   z-index: 100;
 }
 
+.custom-control {
+  cursor: pointer;
+}
 
 .form-control-feedback{
     opacity: 0;
@@ -392,3 +395,5 @@ select.form-control {
         opacity: 1;
     }
 }
+
+

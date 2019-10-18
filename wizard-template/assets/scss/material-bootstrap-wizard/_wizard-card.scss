@@ -38,7 +38,7 @@
         left: 0px;
         border-radius: 4px;
         color: $white-color;
-        cursor: pointer;
+        cursor: default;
         font-weight: 500;
     }
 
@@ -87,7 +87,7 @@
     }
 
     .wizard-footer{
-        padding: 0 15px;
+        padding: 15px;
 
         .checkbox{
             margin-top: 16px;
@@ -111,30 +111,30 @@
         text-align: center;
     }
 
-    .btn{
-        text-transform: uppercase;
-    }
+    // .btn{
+    //     text-transform: uppercase;
+    // }
 
-    .btn-next {
-        background-color: $primary;
-        &:hover {
-            background-color: $primary !important;
-        }
-    }
+    // .btn-next {
+    //     background-color: $primary;
+    //     &:hover {
+    //         background-color: $primary !important;
+    //     }
+    // }
 
-    .btn-previous {
-        background-color: $primary;
-        &:hover {
-            background-color: $primary !important;
-        }
-    }
+    // .btn-previous {
+    //     background-color: $primary;
+    //     &:hover {
+    //         background-color: $primary !important;
+    //     }
+    // }
 
-    .btn-finish {
-        background-color: $secondary;
-        &:hover {
-            background-color: $secondary !important;
-        }
-    }
+    // .btn-finish {
+    //     background-color: $secondary;
+    //     &:hover {
+    //         background-color: $secondary !important;
+    //     }
+    // }
 
     .info-text{
         text-align: center;
@@ -197,6 +197,14 @@
 
     .wizard-title{
         margin: 0;
+    }
+
+    .custom-control {
+        &, label {
+            &, &::before{
+                cursor: pointer;
+            }
+        }
     }
 
 }

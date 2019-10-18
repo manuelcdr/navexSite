@@ -19,25 +19,25 @@
     }
 
     &,
-    &.btn-default{
-        @include btn-styles($gray-light);
-    }
+    // &.btn-default{
+    //     @include btn-styles($gray-light);
+    // }
 
-    &.btn-primary{
-      @include btn-styles($brand-primary);
-    }
-    &.btn-info{
-      @include btn-styles($brand-info);
-    }
-    &.btn-success{
-      @include btn-styles($brand-success);
-    }
-    &.btn-warning{
-      @include btn-styles($brand-warning);
-    }
-    &.btn-danger{
-      @include btn-styles($brand-danger);
-    }
+    // &.btn-primary{
+    //   @include btn-styles($brand-primary);
+    // }
+    // &.btn-info{
+    //   @include btn-styles($brand-info);
+    // }
+    // &.btn-success{
+    //   @include btn-styles($brand-success);
+    // }
+    // &.btn-warning{
+    //   @include btn-styles($brand-warning);
+    // }
+    // &.btn-danger{
+    //   @include btn-styles($brand-danger);
+    // }
     
 
     &:focus,
@@ -112,7 +112,7 @@
     }
     &.btn-sm,
     .btn-group-sm & {
-        padding: 5px 20px;
+        padding: 5px 100px;
         font-size: $mdb-btn-font-size-sm;
     }
     &.btn-xs,
