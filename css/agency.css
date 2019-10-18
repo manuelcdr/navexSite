@@ -105,7 +105,6 @@ iframe {
 
 .btn {
   font-family: 'Varela Round';
-  font-weight: 700;
 }
 
 .btn-xl {
@@ -125,6 +124,22 @@ iframe {
 }
 
 .btn-primary:active, .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: #FF6584;
+  border-color: #FF6584;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+  background-color: #ff3f65 !important;
+  border-color: #ff3f65 !important;
+  color: white;
+}
+
+.btn-secondary:active, .btn-secondary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
