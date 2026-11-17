@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navex Transportes | Redespacho e entregas de última milha na Baixada Santista</title>
+  <meta name="description" content="Galpão em Praia Grande para transportadoras de e-commerce. A Navex recebe, armazena e entrega suas mercadorias de Bertioga a Peruíbe. Fale com a gente no WhatsApp.">
+  <link rel="canonical" href="https://www.navextransportes.com.br/">
+  <meta name="theme-color" content="#214478">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Navex Transportes">
+  <meta property="og:title" content="Navex Transportes | Entregas de última milha na Baixada Santista">
+  <meta property="og:description" content="Você envia um caminhão, a Navex entrega cada pacote de Bertioga a Peruíbe. Redespacho e distribuição para transportadoras de e-commerce.">
+  <meta property="og:url" content="https://www.navextransportes.com.br/">
+  <meta property="og:image" content="https://www.navextransportes.com.br/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.navextransportes.com.br/#empresa",
+    "name": "Navex Transportes",
+    "description": "Armazenamento, redespacho e distribuição de última milha para transportadoras de e-commerce na Baixada Santista, de Bertioga a Peruíbe.",
+    "url": "https://www.navextransportes.com.br/",
+    "logo": "https://www.navextransportes.com.br/assets/icon-512.png",
+    "image": "https://www.navextransportes.com.br/assets/og-image.png",
+    "telephone": "+55-11-93722-0762",
+    "email": "mncfilho@gmail.com",
+    "taxID": "18.425.812/0001-44",
+    "foundingDate": "2021-11-06",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Brigadeiro Eduardo Gomes, 1259 - Jardim Melvi",
+      "addressLocality": "Praia Grande",
+      "addressRegion": "SP",
+      "postalCode": "11712-020",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Bertioga"},
+      {"@type": "City", "name": "Guarujá"},
+      {"@type": "City", "name": "Santos"},
+      {"@type": "City", "name": "Cubatão"},
+      {"@type": "City", "name": "São Vicente"},
+      {"@type": "City", "name": "Praia Grande"},
+      {"@type": "City", "name": "Mongaguá"},
+      {"@type": "City", "name": "Itanhaém"},
+      {"@type": "City", "name": "Peruíbe"}
+    ],
+    "knowsAbout": ["Redespacho", "Distribuição de última milha", "Cross-docking", "Armazenamento de mercadorias", "Logística de e-commerce"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #214478;
+      --navy-700: #1a3762;
+      --navy-900: #0f2140;
+      --navy-050: #eef3fa;
+      --navy-100: #dce6f3;
+      --sky: #afdde9;
+      --amber: #f5a524;
+      --amber-050: #fff6e5;
+      --ink: #172235;
+      --muted: #55627a;
+      --line: #dfe5ee;
+      --bg: #ffffff;
+      --wa: #15803d;
+      --wa-hover: #116b33;
+      --radius: 18px;
+      --shadow: 0 1px 2px rgba(15, 33, 64, .06), 0 8px 28px rgba(15, 33, 64, .08);
+      --wrap: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: var(--navy); }
+    h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -0.015em; }
+    p { margin: 0; }
+    .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+
+    /* ---------- Botões ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 0 24px;
+      border-radius: 999px; border: 2px solid transparent;
+      font: inherit; font-weight: 800; font-size: 16px; text-decoration: none;
+      cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 20px; height: 20px; flex: none; }
+    .btn-wa { background: var(--wa); color: #fff; }
+    .btn-wa:hover { background: var(--wa-hover); }
+    .btn-ghost { background: transparent; color: var(--navy); border-color: var(--navy-100); }
+    .btn-ghost:hover { border-color: var(--navy); }
+    .btn-light { background: #fff; color: var(--navy); }
+    .btn-light:hover { background: var(--navy-050); }
+
+    /* ---------- Cabeçalho ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: saturate(1.4) blur(10px);
+      -webkit-backdrop-filter: saturate(1.4) blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .site-header.scrolled { border-bottom-color: var(--line); }
+    .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
+    .brand { display: flex; align-items: center; }
+    .brand img { width: 132px; height: auto; }
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav a:not(.btn) { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px; }
+    .nav a:not(.btn):hover { color: var(--navy); text-decoration: underline; text-underline-offset: 4px; }
+    .nav .btn { min-height: 44px; padding: 0 18px; font-size: 15px; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(900px 420px at 85% 0%, var(--navy-050), transparent 70%),
+        linear-gradient(180deg, #fff, #fbfcfe);
+      padding: 72px 0 88px;
+    }
+    .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px;
+      background: var(--amber-050); color: #8a5a00;
+      font-weight: 800; font-size: 14px; letter-spacing: .01em;
+    }
+    .eyebrow svg { width: 16px; height: 16px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 900; margin: 20px 0 20px; color: var(--navy-900); }
+    .hero h1 span { color: var(--navy); }
+    .hero .lead { font-size: clamp(18px, 1.6vw, 20px); color: var(--muted); max-width: 34em; }
+    .hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 36px 0 0; padding: 0; list-style: none; }
+    .facts li { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--ink); }
+    .facts svg { width: 20px; height: 20px; color: var(--navy); flex: none; }
+
+    /* Diagrama do hero */
+    .flow-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 24px;
+      box-shadow: var(--shadow); padding: 28px;
+    }
+    .flow-card .title { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 18px; }
+    .flow { display: grid; gap: 0; }
+    .flow-node {
+      display: grid; grid-template-columns: 56px 1fr; gap: 16px; align-items: center;
+      padding: 14px 16px; border-radius: 16px;
+    }
+    .flow-node .ico {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: grid; place-items: center;
+      background: var(--navy-050); color: var(--navy);
+    }
+    .flow-node .ico svg { width: 28px; height: 28px; }
+    .flow-node strong { display: block; font-size: 17px; color: var(--navy-900); }
+    .flow-node small { display: block; font-size: 14px; color: var(--muted); line-height: 1.4; }
+    .flow-node.is-navex { background: var(--navy); }
+    .flow-node.is-navex .ico { background: rgba(255, 255, 255, .14); color: #fff; }
+    .flow-node.is-navex strong { color: #fff; }
+    .flow-node.is-navex small { color: var(--navy-100); }
+    .flow-arrow { height: 34px; margin-left: 43px; border-left: 3px dashed var(--navy-100); position: relative; }
+    .flow-arrow::after {
+      content: ""; position: absolute; left: -8px; bottom: -2px;
+      border: 6.5px solid transparent; border-top: 8px solid var(--navy-100); border-bottom: 0;
+    }
+    .dest { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 0 88px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 12px; border-radius: 999px;
+      background: var(--navy-050); color: var(--navy-900);
+      font-weight: 700; font-size: 14px;
+    }
+    .chip svg { width: 14px; height: 14px; color: var(--navy); }
+    .chip.more { background: transparent; border: 1px dashed var(--navy-100); color: var(--muted); }
+
+    /* ---------- Seções ---------- */
+    section { padding: 96px 0; }
+    .section-head { max-width: 720px; margin-bottom: 52px; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .kicker { color: var(--navy); font-weight: 800; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; }
+    .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 900; color: var(--navy-900); margin: 10px 0 14px; }
+    .section-head p { color: var(--muted); font-size: 18px; }
+
+    /* Como funciona */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; list-style: none; margin: 0; padding: 0; }
+    .step {
+      position: relative; background: #fff; border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 32px 28px 30px;
+    }
+    .step .num {
+      position: absolute; top: 24px; right: 26px;
+      font-size: 48px; font-weight: 900; line-height: 1; color: var(--navy-050);
+    }
+    .step .ico {
+      width: 60px; height: 60px; border-radius: 18px; display: grid; place-items: center;
+      background: var(--navy); color: #fff; margin-bottom: 22px;
+    }
+    .step .ico svg { width: 30px; height: 30px; }
+    .step h3 { font-size: 21px; font-weight: 800; color: var(--navy-900); margin-bottom: 10px; }
+    .step p { color: var(--muted); }
+
+    /* Para quem / vantagens */
+    .bg-soft { background: var(--navy-050); }
+    .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; }
+    .split .section-head { margin-bottom: 0; position: sticky; top: 110px; }
+    .compare { margin-top: 32px; display: grid; gap: 12px; }
+    .compare div {
+      display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start;
+      padding: 14px 16px; border-radius: 14px; background: #fff; font-weight: 600;
+    }
+    .compare svg { width: 22px; height: 22px; margin-top: 2px; }
+    .compare .no { color: var(--muted); }
+    .compare .no svg { color: #b4232c; }
+    .compare .yes { color: var(--navy-900); border: 2px solid var(--navy); }
+    .compare .yes svg { color: var(--wa); }
+    .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .benefit { background: #fff; border-radius: var(--radius); padding: 26px; border: 1px solid var(--line); }
+    .benefit .ico {
+      width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+      background: var(--navy-050); color: var(--navy); margin-bottom: 16px;
+    }
+    .benefit .ico svg { width: 24px; height: 24px; }
+    .benefit h3 { font-size: 18px; font-weight: 800; color: var(--navy-900); margin-bottom: 6px; }
+    .benefit p { color: var(--muted); font-size: 16px; }
+
+    /* Região */
+    .region { display: grid; grid-template-columns: 1.3fr .7fr; gap: 40px; align-items: start; }
+    .map-card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 12px; box-shadow: var(--shadow); }
+    .map-card svg { width: 100%; height: auto; }
+    .map-card .city text { font-family: inherit; font-weight: 700; font-size: 17px; fill: var(--ink); }
+    .map-card .city.main text { font-weight: 900; font-size: 19px; fill: var(--navy-900); }
+    .cities { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .cities li {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 9px 16px; border-radius: 12px; background: var(--navy-050);
+      font-weight: 700;
+    }
+    .cities li.main { background: var(--navy); color: #fff; }
+    .cities .tag { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: 3px 10px; border-radius: 999px; background: var(--amber); color: var(--navy-900); }
+    .cities .tag.hq { background: #fff; color: var(--navy); }
+    .region-note { margin-top: 18px; color: var(--muted); font-size: 15px; }
+
+    /* Parceiros */
+    .partners { padding: 72px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .partners .section-head { margin-bottom: 32px; }
+    .partner-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; list-style: none; margin: 0; padding: 0; }
+    .partner-list li {
+      display: grid; place-items: center; text-align: center;
+      min-height: 92px; padding: 16px; border-radius: var(--radius);
+      border: 1px solid var(--line); background: #fff;
+      font-weight: 900; font-size: 19px; color: var(--navy-900); letter-spacing: -.01em;
+    }
+    .partner-list li small { display: block; font-weight: 700; font-size: 13px; color: var(--muted); letter-spacing: 0; }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq details { border: 1px solid var(--line); border-radius: 16px; background: #fff; padding: 0 22px; }
+    .faq summary {
+      list-style: none; cursor: pointer; padding: 20px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      font-weight: 800; font-size: 18px; color: var(--navy-900);
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: ""; flex: none; width: 12px; height: 12px;
+      border-right: 3px solid var(--navy); border-bottom: 3px solid var(--navy);
+      transform: rotate(45deg) translate(-3px, -3px); transition: transform .2s;
+    }
+    .faq details[open] summary::after { transform: rotate(-135deg) translate(-3px, -3px); }
+    .faq details p { padding: 0 0 22px; color: var(--muted); }
+
+    /* Faixa CTA */
+    .cta-band { padding: 0; }
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy), var(--navy-900));
+      color: #fff; border-radius: 28px; padding: 56px;
+      display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-box::before {
+      content: ""; position: absolute; right: -80px; top: -120px; width: 360px; height: 360px;
+      border-radius: 50%; background: radial-gradient(closest-side, rgba(175, 221, 233, .25), transparent);
+    }
+    .cta-box h2 { font-size: clamp(26px, 3.2vw, 36px); font-weight: 900; }
+    .cta-box p { color: var(--navy-100); margin-top: 10px; font-size: 18px; }
+    .cta-box .btn { position: relative; }
+
+    /* Contato */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    .contact-list { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 14px; }
+    .contact-list li { display: grid; grid-template-columns: 48px 1fr; gap: 14px; align-items: center; }
+    .contact-list .ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--navy-050); color: var(--navy); }
+    .contact-list .ico svg { width: 22px; height: 22px; }
+    .contact-list small { display: block; color: var(--muted); font-size: 14px; font-weight: 600; }
+    .contact-list a, .contact-list span { font-weight: 800; color: var(--navy-900); text-decoration: none; overflow-wrap: anywhere; }
+    .contact-list a:hover { text-decoration: underline; }
+    .map-embed { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); aspect-ratio: 16 / 10; background: var(--navy-050); }
+    .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+    form.card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; box-shadow: var(--shadow); }
+    form.card h3 { font-size: 22px; font-weight: 900; color: var(--navy-900); }
+    form.card > p { color: var(--muted); margin: 6px 0 22px; font-size: 16px; }
+    .field { display: grid; gap: 6px; margin-bottom: 16px; }
+    .field label { font-weight: 800; font-size: 15px; }
+    .field label span { font-weight: 600; color: var(--muted); }
+    .field input, .field textarea {
+      width: 100%; font: inherit; font-size: 16px; color: var(--ink);
+      padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .field input:focus, .field textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 4px var(--navy-050); }
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    form.card .btn { width: 100%; margin-top: 4px; }
+    .form-hint { font-size: 13px; color: var(--muted); margin-top: 12px; text-align: center; }
+
+    /* Rodapé */
+    .site-footer { background: var(--navy-900); color: var(--navy-100); padding: 56px 0 32px; font-size: 15px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+    .site-footer img { width: 130px; margin-bottom: 16px; }
+    .site-footer h4 { color: #fff; font-size: 15px; margin: 0 0 12px; font-weight: 800; }
+    .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+    .site-footer a { color: var(--navy-100); text-decoration: none; }
+    .site-footer a:hover { color: #fff; text-decoration: underline; }
+    .footer-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 14px; }
+
+    /* Botão flutuante (celular) */
+    .wa-float {
+      position: fixed; right: 16px; bottom: 16px; z-index: 60;
+      width: 60px; height: 60px; border-radius: 50%;
+      display: none; place-items: center;
+      background: var(--wa); color: #fff; box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 980px) {
+      .hero .wrap, .split, .region, .contact { grid-template-columns: 1fr; }
+      .split .section-head { position: static; }
+      .steps { grid-template-columns: 1fr; }
+      .partner-list { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+      .cta-box { grid-template-columns: 1fr; padding: 40px 28px; }
+    }
+    @media (max-width: 760px) {
+      body { font-size: 16px; }
+      .nav a:not(.btn) { display: none; }
+      .nav .btn { display: none; }
+      .wa-float { display: grid; }
+      section { padding: 72px 0; }
+      .hero { padding: 40px 0 64px; }
+      .hero .ctas .btn { width: 100%; }
+      .benefits { grid-template-columns: 1fr; }
+      .row-2 { grid-template-columns: 1fr; }
+      .flow-card { padding: 18px; }
+      .flow-node { padding: 12px; grid-template-columns: 48px 1fr; gap: 14px; }
+      .flow-node .ico { width: 48px; height: 48px; }
+      .flow-arrow { margin-left: 35px; }
+      .dest { margin-left: 0; }
+      form.card { padding: 24px 20px; }
+    }
+    @media (max-width: 420px) {
+      .partner-list { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn, .btn:hover { transition: none; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ícones (Lucide, licença ISC) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-warehouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9.5 9.5c0 2.5 2.5 5 5 5l1-1.2-1.8-1-1 .7c-.8-.4-1.4-1-1.8-1.8l.7-1-1-1.8z" fill="currentColor" stroke-width="1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12 2.5 2.5 5-5"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><path d="M8 12h8"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="topo">
+    <div class="wrap">
+      <a class="brand" href="#topo" aria-label="Navex Transportes – início">
+        <img src="assets/logo-navex.svg" alt="Navex" width="132" height="27">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#regiao">Região atendida</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-wa" href="https://wa.me/5511937220762?text=Ol%C3%A1!%20Encontrei%20a%20Navex%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20distribui%C3%A7%C3%A3o." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow"><svg aria-hidden="true"><use href="#i-pin"/></svg>Redespacho e última milha · Baixada Santista</span>
+          <h1>Você envia um caminhão. <span>A gente entrega cada pacote.</span></h1>
+          <p class="lead">A Navex é a parceira de distribuição de transportadoras de e-commerce na Baixada Santista. Recebemos sua carga no nosso galpão em Praia Grande, armazenamos e fazemos as entregas de Bertioga a Peruíbe. Sua transportadora não precisa montar frota na região.</p>
+          <div class="ctas">
+            <a class="btn btn-wa" href="https://wa.me/5511937220762?text=Ol%C3%A1!%20Encontrei%20a%20Navex%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20distribui%C3%A7%C3%A3o." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-chat"/></svg>Falar no WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+          </div>
+          <ul class="facts">
+            <li><svg aria-hidden="true"><use href="#i-calendar"/></svg>5 anos de operação</li>
+            <li><svg aria-hidden="true"><use href="#i-warehouse"/></svg>Galpão em Praia Grande</li>
+            <li><svg aria-hidden="true"><use href="#i-link"/></svg>Integração com o SSW</li>
+          </ul>
+        </div>
+
+        <div class="flow-card" role="img" aria-label="Diagrama: a transportadora envia a carga em um caminhão, a Navex recebe no galpão em Praia Grande e entrega aos clientes finais em toda a Baixada Santista.">
+          <div class="title">Como sua carga chega ao cliente</div>
+          <div class="flow" aria-hidden="true">
+            <div class="flow-node">
+              <div class="ico"><svg><use href="#i-truck"/></svg></div>
+              <div><strong>Sua transportadora</strong><small>Envia toda a carga em uma só viagem</small></div>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node is-navex">
+              <div class="ico"><svg><use href="#i-warehouse"/></svg></div>
+              <div><strong>Galpão Navex</strong><small>Recebe, armazena e separa por rota</small></div>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node">
+              <div class="ico"><svg><use href="#i-home"/></svg></div>
+              <div><strong>Cliente final</strong><small>Entregue na porta, em toda a região</small></div>
+            </div>
+            <div class="dest">
+              <span class="chip"><svg><use href="#i-pin"/></svg>Praia Grande</span>
+              <span class="chip"><svg><use href="#i-pin"/></svg>Santos</span>
+              <span class="chip"><svg><use href="#i-pin"/></svg>Guarujá</span>
+              <span class="chip more">+6 cidades</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="kicker">Como funciona</span>
+          <h2>Terceirize a entrega na Baixada Santista em 3 passos</h2>
+          <p>Em vez de manter uma frota pequena no litoral, sua transportadora concentra a carga em um único envio e a Navex cuida da distribuição.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="num" aria-hidden="true">1</span>
+            <div class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></div>
+            <h3>Você envia a carga</h3>
+            <p>Sua transportadora manda as mercadorias da região em um caminhão até o nosso galpão em Praia Grande.</p>
+          </li>
+          <li class="step">
+            <span class="num" aria-hidden="true">2</span>
+            <div class="ico"><svg aria-hidden="true"><use href="#i-warehouse"/></svg></div>
+            <h3>A Navex recebe e organiza</h3>
+            <p>Descarregamos, armazenamos e separamos os volumes por rota de entrega.</p>
+          </li>
+          <li class="step">
+            <span class="num" aria-hidden="true">3</span>
+            <div class="ico"><svg aria-hidden="true"><use href="#i-home"/></svg></div>
+            <h3>Entregamos ao cliente final</h3>
+            <p>Nossa equipe faz a entrega de última milha porta a porta, de Bertioga a Peruíbe.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section id="vantagens" class="bg-soft">
+      <div class="wrap split">
+        <div class="section-head">
+          <span class="kicker">Para transportadoras</span>
+          <h2>Por que terceirizar a última milha com a Navex</h2>
+          <p>Feito para transportadoras que entregam pedidos de e-commerce e precisam atender o litoral paulista sem ter estrutura própria aqui.</p>
+          <div class="compare">
+            <div class="no"><svg aria-hidden="true"><use href="#i-x"/></svg>Manter veículos, motoristas e um ponto de apoio na Baixada Santista</div>
+            <div class="yes"><svg aria-hidden="true"><use href="#i-check"/></svg>Mandar um caminhão para a Navex e deixar a distribuição com quem já está na região</div>
+          </div>
+        </div>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-wallet"/></svg></div>
+            <h3>Sem frota própria na região</h3>
+            <p>Sem custo fixo de veículos, motoristas e manutenção para atender o litoral.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></div>
+            <h3>Uma viagem só</h3>
+            <p>Toda a carga da Baixada Santista segue em um único caminhão até o nosso galpão.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-route"/></svg></div>
+            <h3>Quem conhece a região</h3>
+            <p>Equipe local, que conhece os bairros e as rotas de cada cidade do litoral.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-link"/></svg></div>
+            <h3>Integração com o SSW</h3>
+            <p>Trabalhamos com o sistema SSW, o que facilita a troca de informações com a sua operação.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-package"/></svg></div>
+            <h3>Armazenamento</h3>
+            <p>Galpão próprio para receber, guardar e organizar as mercadorias até a saída para entrega.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg aria-hidden="true"><use href="#i-cart"/></svg></div>
+            <h3>Especialistas em e-commerce</h3>
+            <p>Há 5 anos entregando pedidos de compras online na Baixada Santista.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIÃO -->
+    <section id="regiao">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Região atendida</span>
+          <h2>Toda a Baixada Santista, de Bertioga a Peruíbe</h2>
+          <p>São 9 cidades do litoral sul de São Paulo, atendidas a partir do nosso galpão em Praia Grande.</p>
+        </div>
+        <div class="region">
+          <div class="map-card">
+            <svg viewBox="0 0 800 500" role="img" aria-labelledby="mapa-titulo">
+              <title id="mapa-titulo">Mapa esquemático da Baixada Santista com as cidades atendidas pela Navex, de Peruíbe a Bertioga, e o galpão em Praia Grande.</title>
+              <defs>
+                <linearGradient id="mar" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#d8eef4"/>
+                  <stop offset="1" stop-color="#bfe2ec"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="500" rx="16" fill="#f7f9fc"/>
+              <!-- Mar -->
+              <path fill="url(#mar)" d="M0 488 C 40 482, 70 476, 92 462 C 150 418, 200 372, 240 352 C 300 318, 330 296, 370 282 C 420 262, 470 232, 512 222 C 528 218, 536 214, 544 206 C 552 198, 566 196, 578 204 C 592 212, 604 214, 620 208 C 640 196, 660 150, 690 106 C 716 76, 760 62, 800 56 L 800 500 L 0 500 Z"/>
+              <text x="770" y="460" text-anchor="end" font-size="16" font-weight="800" fill="#5d93a5" font-family="inherit" letter-spacing="5">OCEANO ATLÂNTICO</text>
+              <!-- Rota de distribuição -->
+              <path d="M76 444 C 150 392, 190 352, 227 333 S 320 280, 350 264 S 450 218, 501 200 M501 200 C 508 186, 512 176, 515 164 M501 200 C 495 160, 488 132, 486 112 M501 200 C 525 186, 545 172, 558 164 M558 164 C 580 172, 595 180, 609 186 M609 186 C 640 150, 665 110, 695 80"
+                    fill="none" stroke="#214478" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round" opacity=".55"/>
+
+              <!-- Cidades -->
+              <g class="city"><circle cx="76" cy="444" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="44" y="420">Peruíbe</text></g>
+              <g class="city"><circle cx="227" cy="333" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="211" y="322" text-anchor="end">Itanhaém</text></g>
+              <g class="city"><circle cx="350" cy="264" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="334" y="252" text-anchor="end">Mongaguá</text></g>
+              <g class="city"><circle cx="486" cy="112" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="400" y="104">Cubatão</text></g>
+              <g class="city"><circle cx="515" cy="164" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="390" y="160">São Vicente</text></g>
+              <g class="city main"><circle cx="558" cy="164" r="11" fill="#214478"/><text x="540" y="138">Santos</text></g>
+              <g class="city main"><circle cx="609" cy="186" r="11" fill="#214478"/><text x="630" y="192">Guarujá</text></g>
+              <g class="city"><circle cx="695" cy="80" r="8" fill="#fff" stroke="#214478" stroke-width="4"/><text x="640" y="56">Bertioga</text></g>
+
+              <!-- Galpão Navex -->
+              <g class="city main">
+                <circle cx="501" cy="200" r="26" fill="#f5a524" opacity=".25"/>
+                <circle cx="501" cy="200" r="15" fill="#214478" stroke="#fff" stroke-width="4"/>
+                <text x="474" y="214" text-anchor="end">Praia Grande</text>
+              </g>
+              <g transform="translate(345 222)">
+                <rect width="128" height="28" rx="14" fill="#f5a524"/>
+                <text x="64" y="19" text-anchor="middle" font-size="14" font-weight="800" fill="#0f2140" font-family="inherit">Galpão Navex</text>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <ul class="cities">
+              <li class="main">Praia Grande <span class="tag hq">Galpão</span></li>
+              <li class="main">Santos <span class="tag">Principal</span></li>
+              <li class="main">Guarujá <span class="tag">Principal</span></li>
+              <li>São Vicente</li>
+              <li>Cubatão</li>
+              <li>Bertioga</li>
+              <li>Mongaguá</li>
+              <li>Itanhaém</li>
+              <li>Peruíbe</li>
+            </ul>
+            <p class="region-note">Mapa ilustrativo, fora de escala.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCEIROS -->
+    <section class="partners" aria-labelledby="parceiros-titulo">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="kicker">Quem já trabalha com a gente</span>
+          <h2 id="parceiros-titulo">Transportadoras que confiam na Navex</h2>
+        </div>
+        <ul class="partner-list">
+          <li>Transbarbosa</li>
+          <li><span>GEW <small>Transportes</small></span></li>
+          <li><span>Maex <small>Logística</small></span></li>
+          <li><span>RX <small>Transportes</small></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="duvidas">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="kicker">Dúvidas frequentes</span>
+          <h2>Perguntas que as transportadoras fazem</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>O que é redespacho ou entrega de última milha?</summary>
+            <p>É a etapa final da entrega: o trecho entre o centro de distribuição e a casa do cliente. A sua transportadora traz a carga até o galpão da Navex em Praia Grande, e a gente leva cada pedido até o destinatário na Baixada Santista.</p>
+          </details>
+          <details>
+            <summary>Quais cidades a Navex atende?</summary>
+            <p>Toda a Baixada Santista, de Bertioga a Peruíbe: Bertioga, Guarujá, Santos, Cubatão, São Vicente, Praia Grande, Mongaguá, Itanhaém e Peruíbe. O maior volume está em Praia Grande, Santos e Guarujá.</p>
+          </details>
+          <details>
+            <summary>Que tipo de carga vocês distribuem?</summary>
+            <p>Hoje trabalhamos com mercadorias de e-commerce: pedidos de compras online que as transportadoras precisam entregar no litoral.</p>
+          </details>
+          <details>
+            <summary>Vocês armazenam a mercadoria?</summary>
+            <p>Sim. A carga é recebida e armazenada no nosso galpão em Praia Grande e organizada por rota até a saída para entrega.</p>
+          </details>
+          <details>
+            <summary>Vocês trabalham com o sistema SSW?</summary>
+            <p>Sim. Operamos com o SSW, o que facilita a integração com transportadoras que já usam o sistema.</p>
+          </details>
+          <details>
+            <summary>Como começar uma parceria?</summary>
+            <p>Chame a gente no WhatsApp ou mande uma mensagem pelo formulário abaixo. Conte sobre a sua operação e o volume estimado para a região, e a gente retorna com uma proposta.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <h2>Precisa de um parceiro de entregas na Baixada Santista?</h2>
+            <p>Fale com a Navex e conte sobre a sua operação. É só chamar no WhatsApp.</p>
+          </div>
+          <a class="btn btn-light" href="https://wa.me/5511937220762?text=Ol%C3%A1!%20Encontrei%20a%20Navex%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20distribui%C3%A7%C3%A3o." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-chat"/></svg>Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Contato</span>
+          <h2>Vamos conversar sobre a sua operação</h2>
+          <p>Atendemos transportadoras que precisam distribuir mercadorias na Baixada Santista.</p>
+        </div>
+        <div class="contact">
+          <div>
+            <ul class="contact-list">
+              <li>
+                <div class="ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></div>
+                <div><small>WhatsApp e telefone</small><a href="https://wa.me/5511937220762" target="_blank" rel="noopener">(11) 93722-0762</a></div>
+              </li>
+              <li>
+                <div class="ico"><svg aria-hidden="true"><use href="#i-mail"/></svg></div>
+                <div><small>E-mail</small><a href="mailto:mncfilho@gmail.com">mncfilho@gmail.com</a></div>
+              </li>
+              <li>
+                <div class="ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></div>
+                <div><small>Galpão</small><span>Av. Brigadeiro Eduardo Gomes, 1259 – Jardim Melvi, Praia Grande – SP, 11712-020</span></div>
+              </li>
+              <li>
+                <div class="ico"><svg aria-hidden="true"><use href="#i-building"/></svg></div>
+                <div><small>CNPJ</small><span>18.425.812/0001-44</span></div>
+              </li>
+            </ul>
+            <div class="map-embed">
+              <iframe title="Localização do galpão da Navex em Praia Grande" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Av.+Brigadeiro+Eduardo+Gomes,+1259,+Jardim+Melvi,+Praia+Grande+-+SP,+11712-020&output=embed"></iframe>
+            </div>
+          </div>
+
+          <form class="card" id="form-contato" novalidate>
+            <h3>Envie uma mensagem</h3>
+            <p>Preencha os campos e sua mensagem abre pronta no WhatsApp da Navex.</p>
+            <div class="row-2">
+              <div class="field">
+                <label for="f-nome">Seu nome</label>
+                <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-empresa">Empresa</label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-volume">Volume estimado <span>(opcional)</span></label>
+              <input id="f-volume" name="volume" type="text" placeholder="Ex.: 300 pacotes por dia">
+            </div>
+            <div class="field">
+              <label for="f-msg">Mensagem</label>
+              <textarea id="f-msg" name="mensagem" placeholder="Conte um pouco sobre a sua operação e as cidades que precisa atender." required></textarea>
+            </div>
+            <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg>Enviar pelo WhatsApp</button>
+            <p class="form-hint">Prefere e-mail? Escreva para <a href="mailto:mncfilho@gmail.com">mncfilho@gmail.com</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo-navex-branco.svg" alt="Navex" width="130" height="27">
+          <p>Armazenamento, redespacho e distribuição de última milha para transportadoras de e-commerce na Baixada Santista.</p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#vantagens">Vantagens</a></li>
+            <li><a href="#regiao">Região atendida</a></li>
+            <li><a href="#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5511937220762" target="_blank" rel="noopener">(11) 93722-0762</a></li>
+            <li><a href="mailto:mncfilho@gmail.com">mncfilho@gmail.com</a></li>
+            <li>Av. Brigadeiro Eduardo Gomes, 1259<br>Jardim Melvi, Praia Grande – SP</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="ano">2026</span> Navex Transportes · <span style="white-space:nowrap">CNPJ 18.425.812/0001-44</span></span>
+        <span>Praia Grande – SP</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5511937220762?text=Ol%C3%A1!%20Encontrei%20a%20Navex%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20distribui%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar com a Navex no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-chat"/></svg>
+  </a>
+
+  <script>
+    (function () {
+      var WA = "5511937220762";
+
+      // Ano no rodapé
+      var ano = document.getElementById("ano");
+      if (ano) ano.textContent = new Date().getFullYear();
+
+      // Borda no cabeçalho ao rolar
+      var header = document.querySelector(".site-header");
+      var onScroll = function () { header.classList.toggle("scrolled", window.scrollY > 8); };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Formulário -> mensagem pronta no WhatsApp
+      var form = document.getElementById("form-contato");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var campos = Array.prototype.slice.call(form.querySelectorAll("[required]"));
+        var vazio = campos.filter(function (c) { return !c.value.trim(); })[0];
+        if (vazio) { vazio.reportValidity ? (vazio.setCustomValidity("Preencha este campo."), vazio.reportValidity(), vazio.setCustomValidity("")) : vazio.focus(); return; }
+
+        var d = new FormData(form);
+        var linhas = [
+          "Olá! Vim pelo site da Navex.",
+          "",
+          "*Nome:* " + d.get("nome").trim(),
+          "*Empresa:* " + d.get("empresa").trim()
+        ];
+        if (d.get("volume").trim()) linhas.push("*Volume estimado:* " + d.get("volume").trim());
+        linhas.push("", d.get("mensagem").trim());
+
+        window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(linhas.join("\n")), "_blank", "noopener");
+      });
+    })();
+  </script>
+</body>
+</html>
